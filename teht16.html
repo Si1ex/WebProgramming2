@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>      
+    .item1 { grid-area: nimi; }
+    .item2 { grid-area: vuosikurssi; }
+    .item3 { grid-area: oppilaitos; }
+    .item4 { grid-area: kurssinnimi; }
+    .item5 { grid-area: kurssintoteutus; }
+    .item6 { grid-area: sukupuoli; }
+    .item7 { grid-area: sukupuoli1; }
+    .item8 { grid-area: sukupuoli2; }
+    .item9 { grid-area: harrastukset; }
+    .item10{ grid-area: harrastukset1; }
+    .item11 { grid-area: harrastukset2; }
+    .item12 { grid-area: harrastukset3; }
+    .item13 { grid-area: napit; }
+
+    .grid-container {
+    display: grid;
+    grid-template-areas:
+        'nimi nimi'
+        'vuosikurssi vuosikurssi'
+        'oppilaitos oppilaitos'
+        'kurssinnimi kurssinnimi'
+        'kurssintoteutus kurssintoteutus'
+        'sukupuoli sukupuoli'
+        'sukupuoli1 sukupuoli1'
+        'sukupuoli2 sukupuoli2'
+        'harrastukset harrastukset'
+        'harrastukset1 harrastukset1'
+        'harrastukset2 harrastukset2'
+        'harrastukset3 harrastukset3'
+        'napit napit';
+    gap: 0px;
+    background-color: white;
+    padding: 0px;
+    border: 1px solid black;
+    justify-content: center;
+    }
+
+    .grid-container > div {
+    background-color: white;
+    text-align: right;
+    padding: 00px 0;
+    font-size: 10px;
+    } 
+    #otsikko {
+        text-align: center;
+    }
+    </style>
+</head>
+    <body>
+        <div id="otsikko"><h1>Syötä ilmoittautumistiedot</h1></div>
+        <form action="http://codez.savonia.fi/jussi/api/test.php" method="GET">
+            <div class="grid-container">
+                
+                <div class="item1">
+                    <label for="nimi"><b>Nimi</b></label>
+                    <input type="text" id="nimi" name="nimi">
+                </div>
+                <div class="item2">
+                    <label for="vuosikurssi"><b>Vuosikurssi</b></label>
+                    <input type="password" id="vuosikurssi" name="vuosikurssi">
+                </div>
+                <div class="item3">
+                    <label for="oppilaitos"><b>Oppilaitos</b></label>
+                    <input type="text" id="oppilaitos" name="oppilaitos">
+                </div>
+                <div class="item4">
+                    <label for="kurssinnimi"><b>Kurssin nimi</b></label>
+                    <select name="kurssinnimi" id="kurssinnimi">
+                        <option value="TKJ">TKJ</option>
+                    </select>
+                </div>            
+                <div class="item5">
+                    <label for="kurssitoteutus">
+                        <b>Kurssin toteutus</b>
+                    </label>
+                    <select name="kurssinnimi" id="kurssinnimi">
+                        <option value="etaopetus">etäopetus</option>
+                    </select>
+                </div> 
+                <div class="item6">
+                    <label for="sukupuoli">
+                        <b>Sukupuoli</b>
+                        <b> mies</b>
+                        <input type="radio" id="mies" name="mies" value="mies">
+                    </label>
+                </div>
+                <div class="item7">
+                    <b>nainen</b>
+                    <input type="radio" id="nainen" name="sukupuoli1" value="nainen">
+                </div>
+                <div class="item8">
+                    <b>en kommentoi</b>
+                    <input type="radio" id="en kommentoi" name="sukupuoli2" value="en kommentoi">
+                </div>
+                <div class="item9">
+                    <label for="harrastukset">
+                        <b>Harrastukset</b>
+                    </label>
+                    <b> ATK-pelit</b>
+                    <input type="checkbox" id="ATK-pelit" name="harrastukset" value="ATK-pelit">
+                </div>
+                <div class="item10">
+                    <b>Tietokonepelit</b>
+                    <input type="checkbox" id="Tietokonepelit" name="harrastukset1" value="Tietokonepelit">
+                </div>
+                <div class="item11">
+                    <b>PC-pelit</b>
+                    <input type="checkbox" id="PC-pelit" name="harrastukset2" value="PC-pelit" checked>
+                </div>
+                <div class="item12">
+                    <b>Videopelit</b>
+                    <input type="checkbox" id="Videopelit" name="h" value="Videopelit">
+                </div>
+                <div class="item13">
+                    <button type="reset" value= "Tyhjennä">Tyhjennä</button>
+                    <button type="submit" value="Lähetä">Lähetä</button>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

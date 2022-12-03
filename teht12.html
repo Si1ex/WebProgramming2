@@ -1,0 +1,97 @@
+<!doctype html>
+<title>Example</title>
+<style>
+    .grid {
+        display: grid;
+        grid-gap: 20px;
+    }
+    .grid > div {
+        font-size: 2vw;
+        padding: .5em;
+        background: gold;
+        text-align: center;
+    }
+    .header {
+        text-align: center;
+        grid-row: 1;
+        grid-column: 1/5;
+    }
+    .nav {
+        grid-row: 2;
+        grid-column: 1/2;
+        text-align: left;
+    }
+    .main {
+        grid-row: 2;
+        grid-column: 2/4;
+    }
+    .aside {
+        grid-row: 2;
+        grid-column: 4/5;
+    }
+    .footer {
+        text-align: center;
+        grid-row: 3;
+        grid-column: 1/5;
+    }
+    #Article1 {
+        float: right;
+    }
+    #Article2 {
+        float: left;
+    }
+    #mainos1 {
+        float: left;
+    }
+    #mainos2 {
+        float: right;
+    }
+</style>
+<div class="grid">
+    <div class="header">
+        <header>
+            <p >Welcome to Savonia</p>
+        </header>
+    </div>
+    <div>
+        <nav class="nav">
+            <ul style="list-style-type: none">
+                <li><a href="">Studying</a></li>
+                <li><a href="">Classes</a></li>
+                <li><a href="">IT</a></li>
+                <li><a href="">Government</a></li>
+                <li><a href="">Spare time</a></li>
+                <li><a href="">Others</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main">
+        <main >
+            <div id="Article1" style="border: 1px black solid; margin: 20px auto; width: 100px">
+                <article>
+                    hkhda
+                </article>
+            </div>
+            <div id="Article2" style="border: 1px black solid; margin: 20px auto; width: 100px">
+                <article>
+                    hello
+                </article>
+            </div>
+        </main>
+    </div>
+    <div class="aside">
+        <aside>
+            <div id="mainos1" style="border: 1px black solid; margin: 20px auto; width: 100px">
+                <p>Mainosasiaa</p>
+            </div>
+            <div id="mainos2" style="border: 1px black solid; margin: 20px auto; width: 100px">
+                <p>Mainosasiaa</p>
+            </div>
+        </aside>
+    </div>
+    <div class="footer">
+        <footer>
+            <p>Contact information</p>
+        </footer>
+    </div>
+</div>
